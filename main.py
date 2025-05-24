@@ -17,7 +17,7 @@ messages_collection.create_index([("room_id", 1), ("timestamp", -1)])  # Optimiz
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
