@@ -172,7 +172,7 @@ async def handle_client(websocket: WebSocket, room_id: str):
         if results is not None:
             return await websocket.send_json({"type": "error", "message": "Room already exists"})
 
-        room = RoomModel.create({'room_creator': results['room_creator'], 'room_id': room_id, 'createdAt': datetime.datetime.utcnow()})
+        room = RoomModel.create({'room_creator': username, 'room_id': room_id, 'createdAt': datetime.datetime.utcnow()})
         await websocket.send_json({'type': 'info', 'data': {
             "room_id": room_id,
             "room_creator": username
