@@ -42,7 +42,7 @@ app.add_middleware(
 )
 
 @app.post("/new-account")
-async def login(request: Request):
+async def create_account(request: Request):
     data = await request.json()
     username = data.get('username')
     password = data.get('password')
