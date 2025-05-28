@@ -35,7 +35,7 @@ def verify_token(token: str):
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://livechatbackend-nu4z.onrender.com"],
+    allow_origins=["https://chatapp-ruddy-delta.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
